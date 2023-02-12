@@ -34,9 +34,9 @@ func loadDatabase() {
 
 func serveApplication() {
 	r := gin.Default()
-	r.GET("/ping", middleware.BasicAuthPermission("can_ping"), controller.Ping)
-
+	r.GET("/ping", controller.Ping)
 	r.POST("/user", middleware.BasicAuthPermission("can_create_users"), controller.CreateUser)
+	r.GET("/users", middleware.BasicAuthPermission("can_list_users"), controller.GetUsers)
 
 	r.Run()
 }
