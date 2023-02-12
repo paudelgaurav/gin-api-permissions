@@ -7,5 +7,5 @@ This is reference repo for my medium article : "Simple API level permission in 
 4. Run server: ```go run main.go```
 
 ---
-- [AddUser Controller](https://github.com/paudelgaurav/gin-api-permissions/blob/main/controller/user.go#L23)
+- [CreateUser Controller](https://github.com/paudelgaurav/gin-api-permissions/blob/main/controller/user.go#L23)
 - [BasicAuthPermission Middleware](https://github.com/paudelgaurav/gin-api-permissions/blob/main/middleware/auth.go#L12)
