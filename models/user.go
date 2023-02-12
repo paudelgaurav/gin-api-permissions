@@ -13,7 +13,7 @@ type User struct {
 	Permissions pq.StringArray `gorm:"type:varchar(200)[]" json:"permissions" form:"permissions"`
 }
 
-func (u *User) BeforeSave() error {
+func (u *User) BeforeSave(tx *gorm.DB) error {
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(u.Password), bcrypt.DefaultCost)
 	if err != nil {
 		return err
